@@ -1,38 +1,88 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.home, .membership, .events, .contact-us, .physiotherapy {
   display: flex;
-  flex-direction: column;
+  height: 90vh;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: 3rem;
 }
 
-.App-link {
-  color: #61dafb;
+.home {
+  background-image: url('images/gym2opacity.JPG');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.contact-us {
+  background-image: url('images/gym3.JPG');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.membership {
+  background-image: url('images/gym4opacity50.JPG');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.events {
+  background-image: url('images/deadlift2opacity50.JPG');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.physiotherapy {
+  background-image: url('images/squat3.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.navbar-logo {
+  width: 25%;
+  height: auto;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+/* MEMBERSHIP PAGE */
+
+h3 {
+  font-size: 2.5rem;
+}
+
+p {
+  font-size: 2rem;
+}
+.membership-grid {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+
+.membership-option {
+  display: flex;
+  flex-direction: row;
+  margin: 40px auto;
+}
+
+.membership-img {
+  margin-right: 100px;
+  align-self: center;
 }
