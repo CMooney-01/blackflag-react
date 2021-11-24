@@ -4,7 +4,7 @@
   padding: 0;
 }
 
-.home, .membership, .events, .contact-us, .physiotherapy {
+.home, .membership, .events, .contact-us, .physiotherapy, .sign-up {
   display: flex;
   height: 90vh;
   align-items: center;
@@ -34,6 +34,14 @@
 }
 
 .events {
+  background-image: url('images/deadlift2opacity50.JPG');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.sign-up {
+  flex-direction: column;
   background-image: url('images/deadlift2opacity50.JPG');
   background-repeat: no-repeat;
   background-position: center;
@@ -115,4 +123,15 @@ p {
 .event-signup-button, a:hover {
   color: #ffffff;
   text-decoration: none;
+}
+
+/* SIGNUP FORM PAGE */
+.signup-form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40vw;
+  gap: 10px;
+  padding: 50px;
 }
