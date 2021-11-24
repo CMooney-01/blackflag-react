@@ -8,6 +8,7 @@ import Membership from './components/pages/Membership'
 import ContactUs from './components/pages/ContactUs'
 import Physiotherapy from './components/pages/Physiotherapy'
 import Home from './components/pages/Home'
+import EventSignup from './components/pages/EventSignup'
 
 class App extends React.Component {
   state = {
@@ -41,6 +42,7 @@ class App extends React.Component {
             <Route path='/membership' element={<Membership />} />
             <Route path='/contact-us' element={<ContactUs />} />
             <Route path='/physiotherapy' element={<Physiotherapy />} />
+            <Route path='/event-signup' element={<EventSignup />} />
           </Routes>
         </Router>
 

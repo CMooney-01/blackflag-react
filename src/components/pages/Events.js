@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class getEvents extends React.Component {
   state = {
@@ -30,13 +31,23 @@ class getEvents extends React.Component {
                   <h1>Upcoming Events</h1>
                   <p>Check out all our upcoming events below!</p>
 
-                  <div>{
+                  <div className='upcoming-events-container'>{
                           this.state.data.map((dynamicData)=>
-                          <div>
-                            <div>{dynamicData.event_title}</div>
-                            <div>{dynamicData.event_date}</div>
-                            <div>{dynamicData.event_description}</div>
-                            <div>{dynamicData.event_price}</div>
+
+                          <div className='event-card'>
+                            <div className='evemt-card-img'>
+                              <div className='event-img'><p>INSERT IMAGE</p></div>
+                            </div>
+
+                            <div className='event-card-body'>
+                              <div className='event-title'><h4>{dynamicData.event_title}</h4></div>
+                              <div className='event-date'><h5>Date of competition: {dynamicData.event_date}</h5></div>
+                              <div className='event-desc'><p>{dynamicData.event_description}</p></div>
+                              <div className='event-price'><p>Entry fee: ${dynamicData.event_price}</p></div>
+                              <Link to="/event-signup">
+                                <button className="event-signup-button"><p>Sign Up</p></button>
+                              </Link>
+                            </div>
                           </div>
                         )
                         }
