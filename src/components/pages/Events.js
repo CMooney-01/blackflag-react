@@ -5,8 +5,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 class GetEvents extends React.Component {
 
-    updateButton = () => {
-      this.props.updateButton(1);
+    updateButton = (value) => {
+      this.props.updateButton(value);
     }
 
     render() {
@@ -29,7 +29,7 @@ class GetEvents extends React.Component {
                         <div className='event-desc'><p>{dynamicData.event_description}</p></div>
                         <div className='event-price'><p>Entry fee: ${dynamicData.event_price}</p></div>
                         <Link to= '/event-signup'>
-                            <button id={dynamicData.event_id} className="event-signup-button" onClick={this.updateButton}>
+                            <button id={dynamicData.event_id} className="event-signup-button" onClick={() => this.updateButton(dynamicData.event_id)}>
                               <p>Sign Up</p>
                             </button>
                         </Link>
