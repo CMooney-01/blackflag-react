@@ -10,64 +10,60 @@ import Physiotherapy from './components/pages/Physiotherapy'
 import Home from './components/pages/Home'
 import EventSignup from './components/pages/EventSignup'
 
+
 class App extends React.Component {
-  state = {
-    data: null
-  };
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: [],
+      btn: ''
+    };
+  }
+
+  updateButton = (value) => {
+    this.setState( { btn: value } );
+  }
 
   componentDidMount() {
     this.callBackendAPI()
-      .then(res => this.setState( { data: res.express }))
+      .then(response => this.setState( { data: response }))
       .catch(err => console.log(err));
   }
 
   callBackendAPI = async () => {
     const response = await fetch('/events');
-    const body = await response.json();
+    const event_data = await response.json();
 
     if (response.status !== 200) {
-      throw Error(body.message)
+      throw Error(event_data.message)
     }
-    return body;
+    // console.log(event_data);
+    return event_data;
   };
 
   render() {
+    const event_data = this.state.data;
+    const btn = this.state.btn;
     return (
       <div className="App">
         <Router>
           <Navbar />
           <Routes>
             <Route path='/' element={<Home />} />
-            <Route path='/events' element={<Events />} />
+            <Route path='/events' element={<Events events={event_data} btn={this.state.btn} updateButton={this.updateButton}/>} />
             <Route path='/membership' element={<Membership />} />
             <Route path='/contact-us' element={<ContactUs />} />
             <Route path='/physiotherapy' element={<Physiotherapy />} />
-            <Route path='/event-signup' element={<EventSignup />} />
+            <Route path='/event-signup' element={<EventSignup events={event_data} btn={this.state.btn}/>} />
           </Routes>
         </Router>
 
-        <p>{this.state.data}</p>
+
+
       </div>
     );
   }
 }
-
-
-// function App() {
-//   return (
-//     <Router>
-//       <Navbar />
-//       <Routes>
-//         <Route path='/' element={<Home />} />
-//         <Route path='/events' element={<Events />} />
-//         <Route path='/membership' element={<Membership />} />
-//         <Route path='/contact-us' element={<ContactUs />} />
-//         <Route path='/physiotherapy' element={<Physiotherapy />} />
-//       </Routes>
-//     </Router>
-//
-//     <p>{this.state.data}</p>
-//   );
-// }
 
 export default App;

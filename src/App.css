@@ -125,6 +125,11 @@ p {
   text-decoration: none;
 }
 
+/* Hiding the child element 'EventSignup' on the Events page to pass data to it */
+.hidden {
+  display: none;
+}
+
 /* SIGNUP FORM PAGE */
 .signup-form-container {
   display: flex;
