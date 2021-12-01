@@ -10,6 +10,23 @@ class GetEvents extends React.Component {
     }
 
     render() {
+
+      const event_data = [];
+      this.props.events
+        .forEach(event => event_data.push(
+          <div className="event-card-body">
+              <div className='event-title'><h4>{event.event_title}</h4></div>
+              <div className='event-date'><h5>Date of competition: {event.event_date}</h5></div>
+              <div className='event-desc'><p>{event.event_description}</p></div>
+              <div className='event-price'><p>Entry fee: ${event.event_price}</p></div>
+              <Link to= '/event-signup'>
+                  <button id={event.event_id} className="event-signup-button" onClick={() => this.updateButton(event.event_id)}>
+                    <p>Sign Up</p>
+                  </button>
+              </Link>
+          </div>
+        ))
+
       return (
 
         <div className='events'>
@@ -18,24 +35,16 @@ class GetEvents extends React.Component {
               <p>Check out all our upcoming events below!</p>
 
               <div className='upcoming-events-container'>
-                <p>{this.props.events.map((dynamicData)=>
+
                   <div className="event-card">
                     <div className="event-card-img">
 
                     </div>
-                    <div className="event-card-body">
-                        <div className='event-title'><h4>{dynamicData.event_title}</h4></div>
-                        <div className='event-date'><h5>Date of competition: {dynamicData.event_date}</h5></div>
-                        <div className='event-desc'><p>{dynamicData.event_description}</p></div>
-                        <div className='event-price'><p>Entry fee: ${dynamicData.event_price}</p></div>
-                        <Link to= '/event-signup'>
-                            <button id={dynamicData.event_id} className="event-signup-button" onClick={() => this.updateButton(dynamicData.event_id)}>
-                              <p>Sign Up</p>
-                            </button>
-                        </Link>
+                    <div>
+                      {event_data}
                     </div>
                   </div>
-                )}</p>
+
               </div>
 
           </div>
