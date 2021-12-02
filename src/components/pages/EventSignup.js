@@ -5,8 +5,18 @@ class EventSignup extends React.Component {
 
     render() {
 
+      const btn = this.props.btn - 1
+      const competition = this.props.events[btn]
+      const comp = (
+                      <div className="event-card-body">
+                          <div className='event-title'><h4>{competition.event_title}</h4></div>
+                          <div className='event-date'><h5>Date of competition: {competition.event_date}</h5></div>
+                          <div className='event-desc'><p>{competition.event_description}</p></div>
+                          <div className='event-price'><p>Entry fee: ${competition.event_price}</p></div>
+                      </div>
+      )
 
-      console.log(this.props.btn);
+      // console.log(comp);
       return (
 
         <div className='sign-up'>
@@ -15,20 +25,7 @@ class EventSignup extends React.Component {
           <p>You are signing up for the following competition:</p>
           <div className='signup-form-container'>
 
-          <p>{this.props.events.map((dynamicData)=>
-            <div className="event-card">
-              <div className="event-card-img">
-                <p>insert img here</p>
-              </div>
-              <div className="event-card-body">
-                  <div className='event-title'><h4>{dynamicData.event_title}</h4></div>
-                  <div className='event-date'><h5>Date of competition: {dynamicData.event_date}</h5></div>
-                  <div className='event-desc'><p>{dynamicData.event_description}</p></div>
-                  <div className='event-price'><p>Entry fee: ${dynamicData.event_price}</p></div>
-              </div>
-            </div>
-          )}</p>
-
+            {comp}
 
             <form className='signup-form-container'>
               <label htmlFor='lifter-name'>
