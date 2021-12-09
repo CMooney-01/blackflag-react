@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 class EventSignup extends React.Component {
@@ -23,48 +24,75 @@ class EventSignup extends React.Component {
           <h3 className='event-signup'>Sign Up</h3>
 
           <p>You are signing up for the following competition:</p>
-          <div className='signup-form-container'>
+
 
             {comp}
 
-            <form className='signup-form-container'>
-              <label htmlFor='lifter-name'>
-                <p>Name:</p>
-              </label>
-              <input
-                type='text'
-                id='lifter-name'
-                name='lifter-name'>
-              </input>
+            <form className='signup-form-container' method="POST">
+              <div className="signup-form-input">
+                <label htmlFor='lifterName'>
+                  <p>Name&nbsp; </p>
+                </label>
 
-              <label htmlFor='lifter-dob'>
-                <p>Date of Birth:</p>
-              </label>
-              <input
-                type='date'
-                id='lifter-dob'
-                name='lifter-dob'>
-              </input>
+                <input
+                  type='text'
+                  id='lifterName'
+                  name='lifterName'>
+                </input>
+              </div>
 
-              <label htmlFor='lifter-phone'>
-                <p>Contact Number:</p>
-              </label>
-              <input
-                type='tel'
-                id='lifter-phone'
-                name='lifter-phone'>
-              </input>
+              <div className="signup-form-input">
+                <label htmlFor='lifterDob'>
+                  <p>Date of Birth&nbsp; </p>
+                </label>
 
-              <label htmlFor='lifter-email'>
-                <p>Email:</p>
-              </label>
-              <input
-                type='email'
-                id='lifter-email'
-                name='lifter-email'>
-              </input>
+                <input
+                  type='date'
+                  id='lifterDob'
+                  name='lifterDob'>
+                </input>
+              </div>
+
+              <div className="signup-form-input">
+                <label htmlFor='lifterPhone'>
+                  <p>Phone&nbsp; </p>
+                </label>
+
+                <input
+                  type='tel'
+                  id='lifterPhone'
+                  name='lifterPhone'>
+                </input>
+              </div>
+
+              <div className="signup-form-input">
+                <label htmlFor='lifterEmail'>
+                  <p>Email&nbsp; </p>
+                </label>
+
+                <input
+                  type='email'
+                  id='lifterEmail'
+                  name='lifterEmail'>
+                </input>
+              </div>
+
+              <div className="signup-form-confirm">
+                <label htmlFor="confirm">
+                  <p>Confirm and proceed to payment info&nbsp;</p>
+                </label>
+                  <button
+                    className="event-signup-button"
+                    name="confirm"
+                    type="submit"
+                    >
+                    <p>Confirm</p>
+                  </button>
+
+              </div>
+
             </form>
-          </div>
+
         </div>
       )
     }

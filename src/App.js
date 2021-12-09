@@ -9,6 +9,7 @@ import ContactUs from './components/pages/ContactUs'
 import Physiotherapy from './components/pages/Physiotherapy'
 import Home from './components/pages/Home'
 import EventSignup from './components/pages/EventSignup'
+import Payment from './components/pages/Payment'
 
 
 class App extends React.Component {
@@ -17,7 +18,8 @@ class App extends React.Component {
     super(props);
     this.state = {
       data: [],
-      btn: ''
+      btn: '',
+      table: []
     };
   }
 
@@ -26,12 +28,16 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    this.callBackendAPI()
+    this.findEvents()
       .then(response => this.setState( { data: response }))
+      .catch(err => console.log(err));
+
+    this.findTable()
+      .then(response => this.setState( { table: response }))
       .catch(err => console.log(err));
   }
 
-  callBackendAPI = async () => {
+  findEvents = async () => {
     const response = await fetch('/events');
     const event_data = await response.json();
 
@@ -40,6 +46,17 @@ class App extends React.Component {
     }
     // console.log(event_data);
     return event_data;
+  };
+
+  findTable = async () => {
+    const response = await fetch('/payment');
+    const table_data = await response.json();
+
+    if (response.status !== 200) {
+      throw Error(table_data.message)
+    }
+    console.log(table_data);
+    return table_data;
   };
 
   render() {
@@ -56,6 +73,7 @@ class App extends React.Component {
             <Route path='/contact-us' element={<ContactUs />} />
             <Route path='/physiotherapy' element={<Physiotherapy />} />
             <Route path='/event-signup' element={<EventSignup events={event_data} btn={this.state.btn}/>} />
+            <Route path='/payment' element={<Payment />} />
           </Routes>
         </Router>
 
