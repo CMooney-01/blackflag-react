@@ -1,6 +1,12 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import { loadStripe } from "@stripe/stripe-js";
+import { Elements } from "@stripe/react-stripe-js";
 import { Link } from 'react-router-dom';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Payment from "./Payment";
+
+
+
 
 class EventSignup extends React.Component {
 
@@ -29,68 +35,67 @@ class EventSignup extends React.Component {
             {comp}
 
             <form className='signup-form-container' method="POST">
-              <div className="signup-form-input">
-                <label htmlFor='lifterName'>
-                  <p>Name&nbsp; </p>
-                </label>
+              <div className="lifter-details">
+                <div className="signup-form-input">
+                  <label htmlFor='lifterName'>
+                  Name <input
+                          type='text'
+                          id='lifterName'
+                          name='lifterName'>
+                       </input>
+                  </label>
+                </div>
 
-                <input
-                  type='text'
-                  id='lifterName'
-                  name='lifterName'>
-                </input>
+                <div className="signup-form-input">
+                  <label htmlFor='lifterDob'>
+                    Date of Birth <input
+                                    type='date'
+                                    id='lifterDob'
+                                    name='lifterDob'>
+                                  </input>
+                  </label>
+                </div>
+
+                <div className="signup-form-input">
+                  <label htmlFor='lifterPhone'>
+                  Phone <input
+                          type='tel'
+                          id='lifterPhone'
+                          name='lifterPhone'>
+                        </input>
+                  </label>
+                </div>
+
+                <div className="signup-form-input">
+                  <label htmlFor='lifterEmail'>
+                  Email <input
+                          type='email'
+                          id='lifterEmail'
+                          name='lifterEmail'>
+                        </input>
+                  </label>
+                </div>
+
+                <div className="signup-form-confirm">
+                  <label htmlFor="confirm">
+                  Confirm <button
+                            id="confirm"
+                            className="event-signup-button"
+                            name="confirm"
+                            type="submit"
+                            value={competition.event_id}
+                            >
+                            <p>Confirm</p>
+                          </button>
+                  </label>
+                </div>
               </div>
 
-              <div className="signup-form-input">
-                <label htmlFor='lifterDob'>
-                  <p>Date of Birth&nbsp; </p>
-                </label>
-
-                <input
-                  type='date'
-                  id='lifterDob'
-                  name='lifterDob'>
-                </input>
+              <div className="stripe-payment-container">
+                <div>
+                  <Payment />
+                </div>
               </div>
-
-              <div className="signup-form-input">
-                <label htmlFor='lifterPhone'>
-                  <p>Phone&nbsp; </p>
-                </label>
-
-                <input
-                  type='tel'
-                  id='lifterPhone'
-                  name='lifterPhone'>
-                </input>
-              </div>
-
-              <div className="signup-form-input">
-                <label htmlFor='lifterEmail'>
-                  <p>Email&nbsp; </p>
-                </label>
-
-                <input
-                  type='email'
-                  id='lifterEmail'
-                  name='lifterEmail'>
-                </input>
-              </div>
-
-              <div className="signup-form-confirm">
-                <label htmlFor="confirm">
-                  <p>Confirm and proceed to payment info&nbsp;</p>
-                </label>
-                  <button
-                    className="event-signup-button"
-                    name="confirm"
-                    type="submit"
-                    >
-                    <p>Confirm</p>
-                  </button>
-
-              </div>
-
             </form>
 
         </div>

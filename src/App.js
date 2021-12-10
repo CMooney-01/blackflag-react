@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// import { loadStripe } from "@stripe/stripe-js";
+// import { Elements } from "@stripe/react-stripe-js";
 import './App.css';
 // Importing pages from pages folder to use in routing below
 import Navbar from './components/Navbar';
@@ -10,7 +12,6 @@ import Physiotherapy from './components/pages/Physiotherapy'
 import Home from './components/pages/Home'
 import EventSignup from './components/pages/EventSignup'
 import Payment from './components/pages/Payment'
-
 
 class App extends React.Component {
 
