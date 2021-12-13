@@ -1,17 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-// import { loadStripe } from "@stripe/stripe-js";
-// import { Elements } from "@stripe/react-stripe-js";
 import './App.css';
 // Importing pages from pages folder to use in routing below
-import Navbar from './components/Navbar';
-import Events from './components/pages/Events'
-import Membership from './components/pages/Membership'
-import ContactUs from './components/pages/ContactUs'
-import Physiotherapy from './components/pages/Physiotherapy'
-import Home from './components/pages/Home'
-import EventSignup from './components/pages/EventSignup'
-import Payment from './components/pages/Payment'
+import Navbar from './Navbar';
+import Events from './pages/Events'
+import Membership from './pages/Membership'
+import ContactUs from './pages/ContactUs'
+import Physiotherapy from './pages/Physiotherapy'
+import Home from './pages/Home'
+import EventSignup from './pages/EventSignup'
+import PaymentSuccess from './pages/PaymentSuccess'
+import CheckoutForm from './pages/CheckoutForm'
+import Payment from './pages/Payment'
+import EventContext from '../context/EventContext'
+
 
 class App extends React.Component {
 
@@ -64,7 +66,9 @@ class App extends React.Component {
     const event_data = this.state.data;
     const btn = this.state.btn;
     return (
+      <EventContext.Provider value={this.state}>
       <div className="App">
+
         <Router>
           <Navbar />
           <Routes>
@@ -74,13 +78,12 @@ class App extends React.Component {
             <Route path='/contact-us' element={<ContactUs />} />
             <Route path='/physiotherapy' element={<Physiotherapy />} />
             <Route path='/event-signup' element={<EventSignup events={event_data} btn={this.state.btn}/>} />
-            <Route path='/payment' element={<Payment />} />
+            <Route path='/payment-success' element={<PaymentSuccess />} />
           </Routes>
         </Router>
 
-
-
       </div>
+      </EventContext.Provider>
     );
   }
 }

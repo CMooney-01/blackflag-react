@@ -5,7 +5,23 @@ import {
   useElements
 } from "@stripe/react-stripe-js";
 
+// function LifterDetails(props) {
+//   const btn = {props.btn};
+//   const competition = {props.events[btn]}
+//   console.log(competition);
+//
+//   const comp = (
+//                   <div className="event-card-body">
+//                       <div className='event-title'><h4>{competition.event_title}</h4></div>
+//                       <div className='event-date'><h5>Date of competition: {competition.event_date}</h5></div>
+//                       <div className='event-desc'><p>{competition.event_description}</p></div>
+//                       <div className='event-price' id='entryFee'><p>Entry fee: ${competition.event_price}</p></div>
+//                   </div>
+//   )
+// }
+
 export default function CheckoutForm() {
+
   const stripe = useStripe();
   const elements = useElements();
 
@@ -58,7 +74,7 @@ export default function CheckoutForm() {
       elements,
       confirmParams: {
         // Make sure to change this to your payment completion page
-        return_url: "http://localhost:3000",
+        return_url: "http://localhost:3000/payment-success",
       },
     });
 

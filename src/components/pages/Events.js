@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import EventContext from "../../context/EventContext"
 
 
 class GetEvents extends React.Component {
+
+    static contextType = EventContext
+
+    componentDidMount() {
+        this.comp = this.context
+    }
 
     updateButton = (value) => {
       this.props.updateButton(value);
@@ -11,20 +17,25 @@ class GetEvents extends React.Component {
 
     render() {
 
+      // console.log(this.context)
+
       const event_data = [];
-      this.props.events
-        .forEach(event => event_data.push(
-          <div className="event-card-body">
-              <div className='event-title'><h4>{event.event_title}</h4></div>
-              <div className='event-date'><h5>Date of competition: {event.event_date}</h5></div>
-              <div className='event-desc'><p>{event.event_description}</p></div>
-              <div className='event-price'><p>Entry fee: ${event.event_price}</p></div>
-              <Link to= '/event-signup'>
-                  <button id={event.event_id} className="event-signup-button" onClick={() => this.updateButton(event.event_id)}>
-                    <p>Sign Up</p>
-                  </button>
-              </Link>
-          </div>
+      this.context.data
+        .forEach(comp => event_data.push(
+          // <EventContext.Consumer>
+            <div className="event-card-body">
+                <div className='event-title'><h4>{comp.event_title}</h4></div>
+                <div className='event-date'><h5>Date of competition: {comp.event_date}</h5></div>
+                <div className='event-desc'><p>{comp.vent_description}</p></div>
+                <div className='event-price'><p>Entry fee: ${comp.event_price}</p></div>
+
+                <Link to= '/event-signup'>
+                    <button id={comp.event_id} className="event-signup-button" onClick={() => this.updateButton(comp.event_id)}>
+                      <p>Sign Up</p>
+                    </button>
+                </Link>
+            </div>
+          // </EventContext.Consumer>
         ))
 
       return (

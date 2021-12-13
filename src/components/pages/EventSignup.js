@@ -1,40 +1,35 @@
-import React, { useState, useEffect } from 'react'
-import { loadStripe } from "@stripe/stripe-js";
-import { Elements } from "@stripe/react-stripe-js";
-import { Link } from 'react-router-dom';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React from 'react'
 import Payment from "./Payment";
-
-
-
+import EventContext from "../../context/EventContext"
 
 class EventSignup extends React.Component {
 
+  static contextType = EventContext
+
+  componentDidMount() {
+      this.comp = this.context
+  }
+
     render() {
 
-      const btn = this.props.btn - 1
-      const competition = this.props.events[btn]
-      const comp = (
-                      <div className="event-card-body">
-                          <div className='event-title'><h4>{competition.event_title}</h4></div>
-                          <div className='event-date'><h5>Date of competition: {competition.event_date}</h5></div>
-                          <div className='event-desc'><p>{competition.event_description}</p></div>
-                          <div className='event-price'><p>Entry fee: ${competition.event_price}</p></div>
-                      </div>
-      )
+      const compID = this.context.btn -1
 
-      // console.log(comp);
       return (
-
-        <div className='sign-up'>
-          <h3 className='event-signup'>Sign Up</h3>
-
-          <p>You are signing up for the following competition:</p>
+          <div className="sign-up">
 
 
-            {comp}
+          <h3>Your are signing up for the following competition:</h3>
+          <br/>
+          <div className="event-card-body">
+            <div className='event-title'><h4>{this.context.data[compID].event_title}</h4></div>
+            <div className='event-date'><h5>Date of competition: {this.context.data[compID].event_date}</h5></div>
+            <div className='event-desc'><p>{this.context.data[compID].event_description}</p></div>
+            <div className='event-price' id='entryFee'><p>Entry fee: ${this.context.data[compID].event_price}</p></div>
+          </div>
 
-            <form className='signup-form-container' method="POST">
+          <div className="signup-container">
+
+          <form className='signup-form-container' method="POST">
               <div className="lifter-details">
                 <div className="signup-form-input">
                   <label htmlFor='lifterName'>
@@ -76,32 +71,23 @@ class EventSignup extends React.Component {
                   </label>
                 </div>
 
-                <div className="signup-form-confirm">
-                  <label htmlFor="confirm">
-                  Confirm <button
-                            id="confirm"
-                            className="event-signup-button"
-                            name="confirm"
-                            type="submit"
-                            value={competition.event_id}
-                            >
-                            <p>Confirm</p>
-                          </button>
-                  </label>
-                </div>
-              </div>
-
-              <div className="stripe-payment-container">
-                <div>
-                  <Payment />
-                </div>
               </div>
             </form>
 
-        </div>
-      )
+            <div className="stripe-payment-container">
+              <div>
+                <Payment />
+              </div>
+            </div>
+
+          </div>
+
+
+          </div>
+
+        )
     }
-    }
+  }
 
 
 export default EventSignup;
