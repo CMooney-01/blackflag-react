@@ -1,24 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
+import EventContext from '../../context/EventContext'
 import {
   PaymentElement,
   useStripe,
   useElements
 } from "@stripe/react-stripe-js";
-
-// function LifterDetails(props) {
-//   const btn = {props.btn};
-//   const competition = {props.events[btn]}
-//   console.log(competition);
-//
-//   const comp = (
-//                   <div className="event-card-body">
-//                       <div className='event-title'><h4>{competition.event_title}</h4></div>
-//                       <div className='event-date'><h5>Date of competition: {competition.event_date}</h5></div>
-//                       <div className='event-desc'><p>{competition.event_description}</p></div>
-//                       <div className='event-price' id='entryFee'><p>Entry fee: ${competition.event_price}</p></div>
-//                   </div>
-//   )
-// }
 
 export default function CheckoutForm() {
 
@@ -28,6 +14,10 @@ export default function CheckoutForm() {
   const [message, setMessage] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
 
+  const context = useContext(EventContext)
+  // console.log(context)
+  const compID = context.btn
+  console.log(compID)
   useEffect(() => {
     if (!stripe) {
       return;
@@ -62,6 +52,21 @@ export default function CheckoutForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    let comp = compID
+    let lifterName = document.querySelector('#lifterName').value
+    let lifterDob = document.querySelector('#lifterDob').value
+    let lifterPhone = document.querySelector('#lifterPhone').value
+    let lifterEmail = document.querySelector('#lifterEmail').value
+    let formData = { comp, lifterName, lifterDob, lifterPhone, lifterEmail }
+
+    fetch('/event-signup', {
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      method: 'POST',
+      body: JSON.stringify(formData)
+    })
+
     if (!stripe || !elements) {
       // Stripe.js has not yet loaded.
       // Make sure to disable form submission until Stripe.js has loaded.
@@ -90,18 +95,67 @@ export default function CheckoutForm() {
     }
 
     setIsLoading(false);
+
   };
 
   return (
-    <form id="payment-form" onSubmit={handleSubmit}>
-      <PaymentElement id="payment-element" />
-      <button disabled={isLoading || !stripe || !elements} id="submit">
-        <span id="button-text">
-          {isLoading ? <div className="spinner" id="spinner"></div> : "Pay now"}
-        </span>
-      </button>
-      {/* Show any error or success messages */}
-      {message && <div id="payment-message">{message}</div>}
+
+    <form id="payment-form" method="POST" onSubmit={handleSubmit}>
+      <div id="eventID">
+        { compID }
+      </div>
+      <div className="lifter-details">
+        <div className="signup-form-input">
+          <label htmlFor='lifterName'>
+          Name <input
+                  type='text'
+                  id='lifterName'
+                  name='lifterName'>
+               </input>
+          </label>
+        </div>
+
+        <div className="signup-form-input">
+          <label htmlFor='lifterDob'>
+            Date of Birth <input
+                            type='date'
+                            id='lifterDob'
+                            name='lifterDob'>
+                          </input>
+          </label>
+        </div>
+
+        <div className="signup-form-input">
+          <label htmlFor='lifterPhone'>
+          Phone <input
+                  type='tel'
+                  id='lifterPhone'
+                  name='lifterPhone'>
+                </input>
+          </label>
+        </div>
+
+        <div className="signup-form-input">
+          <label htmlFor='lifterEmail'>
+          Email <input
+                  type='email'
+                  id='lifterEmail'
+                  name='lifterEmail'>
+                </input>
+          </label>
+        </div>
+      </div>
+
+      <div className="stripe-payment">
+        <PaymentElement id="payment-element" />
+        <button disabled={isLoading || !stripe || !elements} id="submit" type="submit" action="/event-signup" name="confirm">
+          <span id="button-text">
+            {isLoading ? <div className="spinner" id="spinner"></div> : "Pay now"}
+          </span>
+        </button>
+        {/* Show any error or success messages */}
+        {message && <div id="payment-message">{message}</div>}
+      </div>
     </form>
   );
 }
