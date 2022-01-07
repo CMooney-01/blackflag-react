@@ -25,14 +25,14 @@ class GetEvents extends React.Component {
           // <EventContext.Consumer>
             <div className="event-card-body">
                 <div className='event-title'><h4>{comp.event_title}</h4></div>
-                <div className='event-date'><h5>Date of competition: {comp.event_date}</h5></div>
+                <div className='event-date NewDateField'><h5>Date of competition: {comp.NewDateField}</h5></div>
                 <div className='event-desc'><p>{comp.vent_description}</p></div>
                 <div className='event-price'><p>Entry fee: ${comp.event_price}</p></div>
 
                 <Link to= '/event-signup'>
-                    <button id={comp.event_id} className="event-signup-button" onClick={() => this.updateButton(comp.event_id)}>
-                      <p>Sign Up</p>
-                    </button>
+                    <a href="#" id={comp.event_id} className="button1" onClick={() => this.updateButton(comp.event_id)}>
+                      Sign Up
+                    </a>
                 </Link>
             </div>
           // </EventContext.Consumer>

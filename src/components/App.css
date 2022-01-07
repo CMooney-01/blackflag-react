@@ -31,6 +31,17 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 200px;
+  grid-template-areas:
+    "title title title title title title title title"
+    "none none none none none none none none"
+    ". . option1 option1 option1 option1 . ."
+    ". . option2 option2 option2 option2 . ."
+    ". . option3 option3 option3 option3 . .";
+  align-items: start;
 }
 
 .events {
@@ -62,6 +73,11 @@
   background-size: cover;
 }
 
+.navbar {
+  grid-area: navbar;
+  margin-bottom: 0;
+}
+
 .navbar-logo {
   width: 25%;
   height: auto;
@@ -76,25 +92,64 @@
   gap: 20px;
 }
 
+.heading-container {
+  background: #ffffff;
+  width: 100%;
+  text-align: center;
+  font-size: 3rem;
+  padding-top: 50px;
+}
+
+.button1 {
+  display: inline-block;
+  padding: 0.35em 1.2em;
+  border: 0.1em solid #000000;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: #000000;
+  text-align: center;
+  transition: all 0.2s;
+  font-size: 2rem;
+}
+
+.button1:hover {
+  color: #ffffff;
+  background-color: #000000;
+}
+
 /* MEMBERSHIP PAGE */
+
 
 h3 {
   font-size: 2.5rem;
 }
 
 p {
-  font-size: 2rem;
-}
-.membership-grid {
-  display: flex;
-  flex-direction: column;
-  width: 70%;
+  font-size: 1.75rem;
 }
 
 .membership-option {
   display: flex;
   flex-direction: row;
   margin: 40px auto;
+}
+
+.membership-title {
+  grid-area: title;
+}
+
+.option1 {
+  grid-area: option1;
+}
+
+.option2 {
+  grid-area: option2;
+}
+
+.option3 {
+  grid-area: option3;
 }
 
 .membership-img {
@@ -113,24 +168,6 @@ p {
 .event-card {
   display: grid;
   grid-template-columns: 1fr 2fr;
-}
-
-.event-signup-button {
-  background-color: #ffa31a;
-  padding: 5px;
-  border-radius: 8%;
-
-}
-.event-signup-button, a {
-  color: #000000;
-  text-decoration: none;
-}
-.event-signup-button:hover {
-  background-color: #ff0000;
-}
-.event-signup-button, a:hover {
-  color: #ffffff;
-  text-decoration: none;
 }
 
 /* Hiding the child element 'EventSignup' on the Events page to pass data to it */
