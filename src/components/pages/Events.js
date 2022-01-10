@@ -41,16 +41,21 @@ class GetEvents extends React.Component {
       return (
 
         <div className='events'>
-          <div className='container'>
-              <h1>Upcoming Events</h1>
+
+
+
+            <div className="heading-container event-title">
+              <h1>UPCOMING EVENTS</h1>
+            </div>
+
+            <div className="event-tagline">
               <p>Check out all our upcoming events below!</p>
+            </div>
 
               <div className='upcoming-events-container'>
 
                   <div className="event-card">
-                    <div className="event-card-img">
 
-                    </div>
                     <div>
                       {event_data}
                     </div>
@@ -58,7 +63,7 @@ class GetEvents extends React.Component {
 
               </div>
 
-          </div>
+
         </div>
       );
       }

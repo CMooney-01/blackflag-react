@@ -49,6 +49,15 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "title title title title title title title title"
+    ". . tagline tagline tagline tagline . ."
+    ". . events events events events . .";
+  align-items: start;
 }
 
 .payment {
@@ -93,9 +102,10 @@
 }
 
 .heading-container {
-  background: #ffffff;
+  background: #303030;
   width: 100%;
   text-align: center;
+  color: #ffffff;
   font-size: 3rem;
   padding-top: 50px;
 }
@@ -120,7 +130,9 @@
 }
 
 /* MEMBERSHIP PAGE */
-
+h1 {
+  margin-bottom: -23px;
+}
 
 h3 {
   font-size: 2.5rem;
@@ -134,6 +146,20 @@ p {
   display: flex;
   flex-direction: row;
   margin: 40px auto;
+  border: 0.05em solid #000000;
+  border-radius: 0.12em;
+  margin: 0.3em;
+  padding: 0.3em;
+  opacity: 85%;
+  transition: all 0.2s;
+  height: 20vh;
+  align-content: center;
+  justify-content: center;
+}
+
+.membership-option:hover {
+  background: #F8F8F8;
+  opacity: 100%;
 }
 
 .membership-title {
@@ -157,17 +183,47 @@ p {
   align-self: center;
 }
 
+.membership-desc {
+  align-self: center;
+}
+
 /* EVENTS PAGE */
+
+.event-title {
+  grid-area: title;
+}
+
+.event-tagline {
+  grid-area: tagline;
+  text-align: center;
+
+}
+
 .upcoming-events-container {
+  grid-area: events;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
 }
 
 .event-card {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
+  justify-content: center;
+}
+
+.event-card-body {
+  border: 0.05em solid #000000;
+  border-radius: 0.12em;
+  margin: 0.3em;
+  padding: 0.3em;
+  opacity: 85%;
+  transition: all 0.2s;
+}
+
+.event-card-body:hover {
+  background: #F8F8F8;
+  opacity: 100%;
 }
 
 /* Hiding the child element 'EventSignup' on the Events page to pass data to it */

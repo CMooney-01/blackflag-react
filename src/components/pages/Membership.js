@@ -15,24 +15,28 @@ export default function Membership() {
       <div className='membership-option option1'>
         <img className='membership-img' src={membership3} />
         <div className='membership-desc'>
-            <h3>Unlimited Coaching</h3>
+            <h5>Coaching Membership</h5>
             <p>
-              Our unlimited coaching membership includes unlimited coaching during open hours,
-              personalised programming and 24/7 access to Black Flag Barbell Club. This is our
-              most popular membership option as it provides regular, expert coaching combined
-              with a proven training plan customised towards your goals.
+              Our coaching membership includes unlimited coaching during open hours,
+              access to our conditioning classes,
+              personalised programming and 24/7 access to Black Flag Barbell Club.
             </p>
+
         </div>
       </div>
 
       <div className='membership-option option2'>
         <img className='membership-img' src={membership2} />
         <div className='membership-desc'>
-          <h3>Gym Only</h3>
+          <h5>Gym Access Membership</h5>
           <p>
-            Our 'Gym Only' membership does exactly what it says on the tin - 24/7 access
+            Does exactly what it says on the tin - 24/7 access
             to Black Flag Barbell Club and it's awesome equipment for powerlifting, strongman,
             weightlifting and all round strength training.
+          </p>
+          <br />
+          <p>
+            Does not include coaching, programming or access to classes.
           </p>
         </div>
       </div>
@@ -40,10 +44,9 @@ export default function Membership() {
       <div className='membership-option option3'>
         <img className='membership-img' src={membership1} />
         <div className='membership-desc'>
-          <h3>Online Coaching</h3>
+          <h5>Online Coaching</h5>
           <p>
-            Our goal with online coaching is to help you develop as a lifter – both physically
-            and intellectually. With weekly check ins, live catch up calls and video reviews
+            Can't train with us in person? No worries! With weekly check ins, live catch up calls and video reviews
             each week we will hold you accountable, push you to achieve your best and teach you
             the 'what', 'why' and 'how' that drives technical and programming decisions.
           </p>
