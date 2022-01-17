@@ -41,11 +41,6 @@ function Navbar() {
               contact us
             </Link>
           </li>
-          <li className='nav-item'>
-            <Link to='/physiotherapy' className='nav-links' onClick={closeMobileMenu}>
-              physiotherapy
-            </Link>
-          </li>
         </ul>
       </nav>
     </>

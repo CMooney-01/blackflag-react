@@ -6,7 +6,6 @@ import Navbar from './Navbar';
 import Events from './pages/Events'
 import Membership from './pages/Membership'
 import ContactUs from './pages/ContactUs'
-import Physiotherapy from './pages/Physiotherapy'
 import Home from './pages/Home'
 import EventSignup from './pages/EventSignup'
 import PaymentSuccess from './pages/PaymentSuccess'
@@ -76,7 +75,6 @@ class App extends React.Component {
             <Route path='/events' element={<Events events={event_data} btn={this.state.btn} updateButton={this.updateButton}/>} />
             <Route path='/membership' element={<Membership />} />
             <Route path='/contact-us' element={<ContactUs />} />
-            <Route path='/physiotherapy' element={<Physiotherapy />} />
             <Route path='/event-signup' element={<EventSignup events={event_data} btn={this.state.btn}/>} />
             <Route path='/payment-success' element={<PaymentSuccess />} />
           </Routes>
