@@ -6,7 +6,7 @@ export default function Home() {
         <div className='container'>
             <h1>BY LIFTERS, FOR LIFTERS</h1>
             <div>
-              <h4>Lifting weights with mates since 2015</h4>
+              <p>Lifting weights with mates since 2015</p>
             </div>
             <div>
               <a href="#" className="button1">membership options</a>

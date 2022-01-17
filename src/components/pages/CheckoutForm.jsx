@@ -101,9 +101,6 @@ export default function CheckoutForm() {
   return (
 
     <form id="payment-form" method="POST" onSubmit={handleSubmit}>
-      <div id="eventID">
-        { compID }
-      </div>
       <div className="lifter-details">
         <div className="signup-form-input">
           <label htmlFor='lifterName'>

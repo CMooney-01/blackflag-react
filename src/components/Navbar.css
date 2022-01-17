@@ -1,6 +1,6 @@
 .navbar {
   background: #303030;
-  height: 80px;
+  height: 65px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,15 +39,19 @@
 }
 
 .nav-links {
-  color: white;
+  padding: 0.35em 1.2em;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.12em;
+  box-sizing: border-box;
   text-decoration: none;
-  padding: 0.5rem 1rem;
+  color: #ffffff;
+  text-align: center;
+  transition: all 0.2s;
 }
 
 .nav-links:hover {
-  background-color: #1888ff;
-  border-radius: 4px;
-  transition: all 0.2s ease-out;
+  color: #303030;
+  background-color: #ffffff;
 }
 
 .fa-bars {
