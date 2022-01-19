@@ -4,9 +4,43 @@
   padding: 0;
 }
 
+@font-face {
+  font-family: "Geomanist";
+  src: url("pages/assets/geomanist-regular-webfont.woff2") format("woff2"),
+       url("pages/assets/geomanist-regular-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Geomanist Italic";
+  src: url("pages/assets/geomanist-regular-italic-webfont.woff2") format("woff2"),
+       url("pages/assets/geomanist-regular-italic-webfont.woff") format("woff");
+}
+
+body {
+  font-family: "Geomanist";
+  color: #303030;
+}
+
+h1 {
+  margin-bottom: -25px;
+}
+
+h3 {
+  font-size: 2.5rem;
+}
+
+h5 {
+  font-size: 2.25rem;
+}
+
+p {
+  font-size: 1.75rem;
+}
+
+
 .home, .membership, .events, .contact-us, .physiotherapy, .sign-up, .payment, .payment-success {
   display: flex;
-  height: 90vh;
+  height: 100vh;
   align-items: center;
   justify-content: center;
   font-size: 3rem;
@@ -53,6 +87,7 @@
     ". . option2 option2 option2 option2 . ."
     ". . option3 option3 option3 option3 . .";
   align-items: start;
+  grid-row-gap: 20px;
 }
 
 .events {
@@ -81,13 +116,6 @@
 .sign-up {
   flex-direction: column;
   background-image: url('images/deadlift2opacity50.JPG');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
-.physiotherapy {
-  background-image: url('images/squat3opacity.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -124,12 +152,12 @@
 .button1 {
   display: inline-block;
   padding: 0.35em 1.2em;
-  border: 0.1em solid #000000;
+  border: 0.1em solid #303030;
   margin: 0 0.3em 0.3em 0;
   border-radius: 0.12em;
   box-sizing: border-box;
   text-decoration: none;
-  color: #000000;
+  color: #303030;
   text-align: center;
   transition: all 0.2s;
   font-size: 2rem;
@@ -137,40 +165,22 @@
 
 .button1:hover {
   color: #ffffff;
-  background-color: #000000;
+  background-color: #303030;
 }
 
 /* MEMBERSHIP PAGE */
-h1 {
-  margin-bottom: -23px;
-}
-
-h3 {
-  font-size: 2.5rem;
-}
-
-p {
-  font-size: 1.75rem;
-}
 
 .membership-option {
   display: flex;
   flex-direction: row;
-  margin: 40px auto;
-  border: 0.02em solid #000000;
-  border-radius: 0.12em;
-  margin: 0.3em;
-  padding: 0.3em;
-  opacity: 85%;
-  transition: all 0.2s;
-  height: 20vh;
+
+  background-image: url('images/test.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  height: 24vh;
   align-content: center;
   justify-content: center;
-}
-
-.membership-option:hover {
-  background: #F8F8F8;
-  opacity: 100%;
 }
 
 .membership-title {
@@ -190,12 +200,17 @@ p {
 }
 
 .membership-img {
-  margin-right: 100px;
+  margin-right: 2.5vw;
   align-self: center;
 }
 
 .membership-desc {
   align-self: center;
+}
+
+.membership-para {
+  font-size: 1.3rem;
+  width: 30vw;
 }
 
 /* EVENTS PAGE */
