@@ -51,7 +51,7 @@ class GetEvents extends React.Component {
             </div>
 
             <div className="event-tagline">
-              Check out all our upcoming events below!
+              Check out our upcoming events below!
             </div>
 
               <div className='upcoming-events-container'>

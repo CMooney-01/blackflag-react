@@ -9,8 +9,8 @@ export default function Home() {
               <p>Lifting weights with mates since 2015</p>
             </div>
             <div>
-              <a href="#" className="button1">membership options</a>
-              <a href="#" className="button1">upcoming events</a>
+              <a href="/membership" className="button1">membership options</a>
+              <a href="/events" className="button1">upcoming events</a>
             </div>
         </div>
     </div>
