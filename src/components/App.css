@@ -305,6 +305,30 @@ input {
   margin-top: 50px;
 }
 
+.signup-event-container {
+  background-image: url('images/test.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  width: 40vw;
+
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.signup-card-body {
+  margin: 50px;
+  width: 80%;
+}
+
+.stripe-payment-container {
+  display: flex;
+  justify-content: center;
+  width: 40vw;
+  margin-left:-100px;
+}
+
 /* CONTACT US PAGE  */
 
 .contact-title {
