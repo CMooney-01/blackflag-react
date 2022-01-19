@@ -38,7 +38,7 @@ p {
 }
 
 
-.home, .membership, .events, .contact-us, .physiotherapy, .sign-up, .payment, .payment-success {
+.home, .membership, .events, .contact-us, .sign-up, .payment, .payment-success {
   display: flex;
   height: 100vh;
   align-items: center;
@@ -98,7 +98,7 @@ p {
 
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto;
+  grid-template-rows: 1fr .5fr 1fr 1fr;
   grid-template-areas:
     "title title title title title title title title"
     ". . tagline tagline tagline tagline . ."
@@ -160,7 +160,7 @@ p {
   color: #303030;
   text-align: center;
   transition: all 0.2s;
-  font-size: 2rem;
+  font-size: 1.25rem;
 }
 
 .button1:hover {
@@ -215,16 +215,6 @@ p {
 
 /* EVENTS PAGE */
 
-.event-title {
-  grid-area: title;
-}
-
-.event-tagline {
-  grid-area: tagline;
-  text-align: center;
-
-}
-
 .upcoming-events-container {
   grid-area: events;
   display: flex;
@@ -234,22 +224,54 @@ p {
 
 }
 
-.event-card {
+.event-container {
+  background-image: url('images/test.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  width: 40vw;
+
+  display: flex;
+  align-content: center;
   justify-content: center;
 }
 
 .event-card-body {
-  border: 0.02em solid #000000;
-  border-radius: 0.12em;
-  margin: 0.3em;
-  padding: 0.3em;
-  opacity: 85%;
-  transition: all 0.2s;
+  margin: 25px 25px 50px 25px;
+  width: 80%;
 }
 
-.event-card-body:hover {
-  background: #F8F8F8;
-  opacity: 100%;
+.event-card {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+
+}
+
+.event-page-title {
+  grid-area: title;
+}
+
+.event-title {
+  font-size: 2rem;
+}
+
+.event-date {
+  font-size: 1.5rem;
+}
+
+.event-desc {
+  font-size: 1.25rem;
+}
+
+.event-price {
+  font-size: 1.5rem;
+}
+
+.event-tagline {
+  grid-area: tagline;
+  text-align: center;
+
 }
 
 /* Hiding the child element 'EventSignup' on the Events page to pass data to it */

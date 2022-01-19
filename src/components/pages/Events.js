@@ -23,11 +23,12 @@ class GetEvents extends React.Component {
       this.context.data
         .forEach(comp => event_data.push(
           // <EventContext.Consumer>
+          <div className="event-container">
             <div className="event-card-body">
-                <div className='event-title'><h4>{comp.event_title}</h4></div>
-                <div className='event-date NewDateField'><h5>Date of competition: {comp.NewDateField}</h5></div>
-                <div className='event-desc'><p>{comp.vent_description}</p></div>
-                <div className='event-price'><p>Entry fee: ${comp.event_price}</p></div>
+                <div className='event-title'>{comp.event_title}</div>
+                <div className='event-date NewDateField'>Date of competition: {comp.NewDateField}</div>
+                <div className='event-desc'>{comp.event_description}</div>
+                <div className='event-price'>Entry fee: ${comp.event_price}</div>
 
                 <Link to= '/event-signup'>
                     <a href="#" id={comp.event_id} className="button1" onClick={() => this.updateButton(comp.event_id)}>
@@ -35,6 +36,7 @@ class GetEvents extends React.Component {
                     </a>
                 </Link>
             </div>
+          </div>
           // </EventContext.Consumer>
         ))
 
@@ -44,12 +46,12 @@ class GetEvents extends React.Component {
 
 
 
-            <div className="heading-container event-title">
+            <div className="heading-container event-page-title">
               <h1>UPCOMING EVENTS</h1>
             </div>
 
             <div className="event-tagline">
-              <p>Check out all our upcoming events below!</p>
+              Check out all our upcoming events below!
             </div>
 
               <div className='upcoming-events-container'>

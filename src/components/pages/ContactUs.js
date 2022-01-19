@@ -12,7 +12,7 @@ export default function ContactUs() {
 
       <div className='contact-coaching-hours'>
         <p>
-          Coaching (aka staffed) hours are available weekdays in the morning and evening.
+          Coaching (aka staffed) hours:
         </p>
 
         <div>
@@ -28,7 +28,7 @@ export default function ContactUs() {
 
       <div className='contact-email'>
         <p>
-          Email enquiries:
+          Email enquiries:<br />
           info@blackflagbarbell.com.au
         </p>
       </div>
@@ -36,10 +36,10 @@ export default function ContactUs() {
 
       <div className='contact-address'>
         <p>
+          Address:<br />
           Unit 14,
           44 Carrington Road<br />
           Castle Hill, NSW
-        
         </p>
       </div>
 
