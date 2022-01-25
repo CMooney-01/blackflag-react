@@ -98,7 +98,7 @@ p {
 
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr .5fr 1fr 1fr;
+  grid-template-rows: .5fr .3fr 1fr 1fr;
   grid-template-areas:
     "title title title title title title title title"
     ". . tagline tagline tagline tagline . ."
@@ -229,7 +229,6 @@ p {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
 }
 
 .event-container {
@@ -242,6 +241,8 @@ p {
   display: flex;
   align-content: center;
   justify-content: center;
+
+  margin-bottom: 25px;
 }
 
 .event-card-body {
@@ -253,7 +254,6 @@ p {
   display: flex;
   align-content: center;
   justify-content: center;
-
 }
 
 .event-page-title {
@@ -289,6 +289,33 @@ p {
 
 /* SIGNUP FORM PAGE */
 
+.sign-up {
+  background-image: url('images/deadlift2opacity50.JPG');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: .2fr .2fr .25fr;
+  grid-template-areas:
+    "title title title title title title title title"
+    ". . confirmation confirmation confirmation confirmation . ."
+    ". . event event event event . ."
+    ". . payment payment payment payment . .";
+  align-items: start;
+}
+
+.signup-title {
+  grid-area: title;
+}
+
+.signup-confirmation-warning {
+  grid-area: confirmation;
+  text-align: center;
+  margin: 2rem;
+}
+
 label {
   display: flex;
   flex-direction: row;
@@ -308,17 +335,15 @@ input {
 
 #payment-form {
   display: flex;
-  justify-content: center;
+  align-items: center;
   gap: 100px;
-  margin-top: 50px;
 }
 
 .signup-event-container {
-  background-image: url('images/test.svg');
+  grid-area: event;
+  background-image: url('images/test2.svg');
   background-repeat: no-repeat;
-  background-size: cover;
-
-  width: 40vw;
+  background-size: contain;
 
   display: flex;
   align-content: center;
@@ -326,14 +351,13 @@ input {
 }
 
 .signup-card-body {
-  margin: 50px;
-  width: 80%;
+  margin: 25px;
 }
 
 .stripe-payment-container {
+  grid-area: payment;
   display: flex;
   justify-content: center;
-  width: 40vw;
   margin-left:-100px;
 }
 
@@ -372,7 +396,7 @@ input {
   justify-content: center;
 }
 
-@media (min-width: 43em) {
+@media (max-width: 43em) {
 
   .navbar-logo {
     width: 35%;
@@ -634,6 +658,66 @@ input {
 
 .stripe-payment {
   width: 80%;
+}
+
+/* CONTACT US PAGE  */
+
+.contact-us {
+  background-image: url('images/gym3opacity.JPG');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "title title title title title title title title"
+    "none none none none none none none none"
+    "hours hours hours hours hours hours hours hours"
+    ". . email email email email . ."
+    ". . . address address . . ."
+    "map map map map map map map map";
+    align-items: start;
+}
+
+.contact-title {
+  grid-area: title;
+  font-size: 1.75rem;
+
+}
+
+.contact-coaching-hours p {
+  grid-area: hours;
+  text-align: center;
+
+  font-size: 1.25rem;
+}
+
+.contact-address p {
+  grid-area: address;
+
+  display: flex;
+  justify-content: center;
+
+  text-align: center;
+
+  font-size: 1.25rem;
+}
+
+.contact-email p {
+  grid-area: email;
+
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  font-size: 1.25rem;
+}
+
+.contact-map {
+  grid-area: map;
+
+  display: flex;
+  justify-content: center;
 }
 
 }
