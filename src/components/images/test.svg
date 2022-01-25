@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="260.76804mm"
-   height="58.777687mm"
-   viewBox="0 0 260.76803 58.777687"
+   width="269.10309mm"
+   height="77.489021mm"
+   viewBox="0 0 269.10308 77.489021"
    version="1.1"
    id="svg5"
    sodipodi:docname="test.svg"
@@ -24,8 +24,8 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="1.5554293"
-     inkscape:cx="387.99578"
-     inkscape:cy="110.25895"
+     inkscape:cx="556.43802"
+     inkscape:cy="224.0539"
      inkscape:window-width="2560"
      inkscape:window-height="1369"
      inkscape:window-x="-8"
@@ -35,23 +35,23 @@
      showguides="true"
      inkscape:guide-bbox="true">
     <sodipodi:guide
-       position="-23.814433,133.66919"
+       position="20.752574,122.27228"
        orientation="0,-1"
        id="guide5055" />
     <sodipodi:guide
-       position="-59.536081,127.54548"
+       position="-14.969074,116.14857"
        orientation="1,0"
        id="guide5057" />
     <sodipodi:guide
-       position="-59.536081,127.54548"
+       position="-14.969074,116.14857"
        orientation="1,0"
        id="guide5059" />
     <sodipodi:guide
-       position="-35.21134,133.66919"
+       position="9.3556671,122.27228"
        orientation="0,-1"
        id="guide5061" />
     <sodipodi:guide
-       position="-35.21134,133.66919"
+       position="9.3556671,122.27228"
        orientation="0.70710678,-0.70710678"
        id="guide5063" />
   </sodipodi:namedview>
@@ -61,22 +61,22 @@
      inkscape:groupmode="layer"
      id="layer2"
      inkscape:label="Layer 2"
-     transform="translate(87.296473,-68.466564)">
+     transform="translate(131.86348,-38.358317)">
     <path
        id="rect31-1"
-       style="fill:#1e1e1e;fill-opacity:0.5;fill-rule:evenodd;stroke-width:0.734278"
-       d="m -71.646989,68.466564 -15.649484,15.64948 0.0582,38.613386 239.957273,-0.16099 16.6701,-15.77707 V 68.816124 Z"
+       style="fill:#1e1e1e;fill-opacity:0.5;fill-rule:evenodd;stroke-width:0.856459"
+       d="m -115.71379,38.358317 -16.14969,20.631349 0.0601,50.905604 247.62714,-0.21224 17.20293,-20.799555 V 38.819156 Z"
        sodipodi:nodetypes="ccccccc" />
   </g>
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(87.296473,-68.466564)">
+     transform="translate(131.86348,-38.358317)">
     <path
        id="rect31"
-       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke-width:0.737815"
-       d="m -67.564515,72.719148 -15.649484,15.64948 0.1701,38.875622 239.845369,-0.42322 16.6701,-15.77707 -0.12579,-38.388612 z"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke-width:0.860584"
+       d="m -111.50083,43.964672 -16.14969,20.63135 0.17554,51.251318 247.51166,-0.55795 17.20293,-20.799551 -0.12981,-50.609277 z"
        sodipodi:nodetypes="ccccccc" />
   </g>
 </svg>

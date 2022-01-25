@@ -113,6 +113,14 @@ p {
   background-size: cover;
 }
 
+.payment-success {
+  background-image: url('images/gym4opacity50.JPG');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+}
+
 .sign-up {
   flex-direction: column;
   background-image: url('images/deadlift2opacity50.JPG');
@@ -176,7 +184,7 @@ p {
 
   background-image: url('images/test.svg');
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
 
   height: 24vh;
   align-content: center;
@@ -406,7 +414,7 @@ input {
 
     background-image: url('images/test.svg');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
 
     height: 22vh;
     width: 90%;
@@ -435,6 +443,7 @@ input {
   }
 
   .membership-img {
+    margin-top: -7%;
     margin-left: 5%;
     margin-right: 3vw;
     align-self: center;
@@ -442,7 +451,7 @@ input {
   }
 
   .membership-desc {
-    align-self: center;
+    margin-top: -8%;
     width: 60vw;
   }
 
