@@ -17,7 +17,14 @@ class EventSignup extends React.Component {
       return (
           <div className="sign-up">
 
-            <h5>Your are signing up for the following competition:</h5>
+            <div className='heading-container signup-title'>
+              <h1>SIGN UP</h1>
+            </div>
+
+            <div className='signup-confirmation-warning'>
+              <h5>Your are signing up for the following competition:</h5>
+            </div>
+
 
             <div className="signup-event-container">
 
