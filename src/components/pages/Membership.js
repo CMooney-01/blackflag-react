@@ -33,8 +33,7 @@ export default function Membership() {
           <p className='membership-para'>
             24/7 access
             to Black Flag Barbell Club and it's awesome equipment for powerlifting, strongman,
-            weightlifting and all round strength training.<br />
-            Does not include coaching or programming.
+            weightlifting and all round strength training.
           </p>
         </div>
       </div>

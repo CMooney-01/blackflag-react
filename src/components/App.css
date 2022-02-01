@@ -21,8 +21,10 @@ body {
   color: #303030;
 }
 
+@media (min-width: 576px) {
 h1 {
-  margin-bottom: -25px;
+  margin-bottom: -15px;
+  font-size: 3.5rem;
 }
 
 h3 {
@@ -30,11 +32,11 @@ h3 {
 }
 
 h5 {
-  font-size: 2.25rem;
+  font-size: 1.5rem;
 }
 
 p {
-  font-size: 1.75rem;
+  font-size: 1rem;
 }
 
 
@@ -43,7 +45,6 @@ p {
   height: 100vh;
   align-items: center;
   justify-content: center;
-  font-size: 3rem;
 }
 
 .home {
@@ -69,41 +70,6 @@ p {
     ". . . address address . . ."
     "map map map map map map map map";
     align-items: start;
-}
-
-.membership {
-  background-image: url('images/gym2opacity.JPG');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 200px;
-  grid-template-areas:
-    "title title title title title title title title"
-    "none none none none none none none none"
-    ". . option1 option1 option1 option1 . ."
-    ". . option2 option2 option2 option2 . ."
-    ". . option3 option3 option3 option3 . .";
-  align-items: start;
-  grid-row-gap: 20px;
-}
-
-.events {
-  background-image: url('images/deadlift2opacity50.JPG');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: .5fr .3fr 1fr 1fr;
-  grid-template-areas:
-    "title title title title title title title title"
-    ". . tagline tagline tagline tagline . ."
-    ". . events events events events . .";
-  align-items: start;
 }
 
 .payment {
@@ -177,6 +143,23 @@ p {
 }
 
 /* MEMBERSHIP PAGE */
+.membership {
+  background-image: url('images/gym2opacity.JPG');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: .6fr .3fr .3fr .3fr .3fr .3fr .3fr;
+  grid-template-areas:
+    "title title title title title title title title"
+    "option1 option1 option1 option1 option1 option1 option1 option1"
+    "option2 option2 option2 option2 option2 option2 option2 option2"
+    "option3 option3 option3 option3 option3 option3 option3 option3";
+  align-items: start;
+  grid-row-gap: 30px;
+}
 
 .membership-option {
   display: flex;
@@ -186,13 +169,31 @@ p {
   background-repeat: no-repeat;
   background-size: cover;
 
-  height: 24vh;
-  align-content: center;
-  justify-content: center;
+  width: 90%;
+  align-items: center;
+  margin: auto;
+  padding: 10px;
 }
 
 .membership-title {
   grid-area: title;
+}
+
+.membership-img {
+  width: 40%;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  margin-top: 2.5%;
+}
+
+.membership-desc {
+  align-self: center;
+  width: 70%;
+}
+
+.membership-para {
+  font-size: 1rem;
+  width: 95%;
 }
 
 .option1 {
@@ -207,53 +208,48 @@ p {
   grid-area: option3;
 }
 
-.membership-img {
-  margin-right: 2.5vw;
-  align-self: center;
-}
-
-.membership-desc {
-  align-self: center;
-}
-
-.membership-para {
-  font-size: 1.3rem;
-  width: 30vw;
-}
-
 /* EVENTS PAGE */
+.events {
+  background-image: url('images/deadlift2opacity50.JPG');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: .5fr .25fr .25fr .25fr .25fr .25fr;
+  grid-template-areas:
+    "title title title title title title title title"
+    "tagline tagline tagline tagline tagline tagline tagline tagline"
+    "events events events events events events events events";
+  align-items: start;
+}
+
 
 .upcoming-events-container {
   grid-area: events;
   display: flex;
   flex-direction: column;
+  width: 95%;
+  margin: auto;
   align-items: center;
-  justify-content: center;
 }
 
 .event-container {
   background-image: url('images/test.svg');
   background-repeat: no-repeat;
   background-size: contain;
-
-  width: 40vw;
-
-  display: flex;
-  align-content: center;
-  justify-content: center;
-
-  margin-bottom: 25px;
+  width: 100%;
 }
 
 .event-card-body {
-  margin: 25px 25px 50px 25px;
-  width: 80%;
+  width: 100%;
+  text-align: center;
+  height: 25vh;
+  padding: 35px;
 }
 
 .event-card {
-  display: flex;
-  align-content: center;
-  justify-content: center;
 }
 
 .event-page-title {
@@ -261,25 +257,25 @@ p {
 }
 
 .event-title {
-  font-size: 2rem;
+  font-size: 1.25rem;
+
 }
 
 .event-date {
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .event-desc {
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 
 .event-price {
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .event-tagline {
   grid-area: tagline;
   text-align: center;
-
 }
 
 /* Hiding the child element 'EventSignup' on the Events page to pass data to it */
@@ -297,11 +293,11 @@ p {
 
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: .2fr .2fr .25fr;
+  grid-template-rows: auto;
   grid-template-areas:
     "title title title title title title title title"
-    ". . confirmation confirmation confirmation confirmation . ."
-    ". . event event event event . ."
+    "confirmation confirmation confirmation confirmation confirmation confirmation confirmation confirmation"
+    "event event event event event event event event"
     ". . payment payment payment payment . .";
   align-items: start;
 }
@@ -313,52 +309,50 @@ p {
 .signup-confirmation-warning {
   grid-area: confirmation;
   text-align: center;
-  margin: 2rem;
+  margin: 1.5rem;
+}
+
+.signup-event-container {
+  grid-area: event;
+  background-image: url('images/test.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 95%;
+  margin: auto;
+}
+
+.signup-card-body {
+  width: 100%;
+  text-align: center;
+  height: 20vh;
+  padding: 35px;
 }
 
 label {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  text-align: right;
-  width: 500px;
+  flex-direction: column;
+  text-align: left;
   line-height: 16px;
-  font-size: 1.7rem;
+  font-size: 1rem;
   padding: 10px 0 10px 0;
 }
 
 input {
   height: 35px;
-  flex: 0 0 300px;
-  margin-left: 30px;
 }
 
 #payment-form {
   display: flex;
-  align-items: center;
-  gap: 100px;
-}
+  flex-direction: column;
+  gap: 30px;
 
-.signup-event-container {
-  grid-area: event;
-  background-image: url('images/test2.svg');
-  background-repeat: no-repeat;
-  background-size: contain;
-
-  display: flex;
-  align-content: center;
-  justify-content: center;
-}
-
-.signup-card-body {
-  margin: 25px;
 }
 
 .stripe-payment-container {
   grid-area: payment;
   display: flex;
-  justify-content: center;
-  margin-left:-100px;
+
+  margin: auto;
 }
 
 /* CONTACT US PAGE  */
@@ -395,652 +389,4 @@ input {
   display: flex;
   justify-content: center;
 }
-
-@media (max-width: 43em) {
-
-  .navbar-logo {
-    width: 35%;
-    height: auto;
-  }
-
-  h1 {
-    margin-bottom: -14px;
-  }
-
-  h5 {
-    font-size: 1.1rem;
-  }
-
-  .membership {
-    background-image: url('images/gym2opacity.JPG');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas:
-      "title title title title title title title title"
-      "none none none none none none none none"
-      "option1 option1 option1 option1 option1 option1 option1 option1"
-      "option2 option2 option2 option2 option2 option2 option2 option2"
-      "option3 option3 option3 option3 option3 option3 option3 option3";
-    align-items: start;
-    grid-row-gap: 20px;
-  }
-
-  /* MEMBERSHIP PAGE */
-
-  .membership-option {
-    display: flex;
-    flex-direction: row;
-
-    background-image: url('images/test.svg');
-    background-repeat: no-repeat;
-    background-size: contain;
-
-    height: 22vh;
-    width: 90%;
-    align-content: center;
-    justify-content: center;
-  }
-
-  .membership-title {
-    grid-area: title;
-    font-size: 1.75rem;
-  }
-
-  .option1 {
-    grid-area: option1;
-    margin-left: 5%;
-  }
-
-  .option2 {
-    grid-area: option2;
-    margin-left: 5%;
-  }
-
-  .option3 {
-    grid-area: option3;
-    margin-left: 5%;
-  }
-
-  .membership-img {
-    margin-top: -7%;
-    margin-left: 5%;
-    margin-right: 3vw;
-    align-self: center;
-    width:145px;
-  }
-
-  .membership-desc {
-    margin-top: -8%;
-    width: 60vw;
-  }
-
-  .membership-para {
-    font-size: 1rem;
-    width: 58vw;
-  }
-
-  /* EVENTS PAGE */
-
-  .events {
-    background-image: url('images/deadlift2opacity50.JPG');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: .75fr .5fr 1fr 1fr;
-    grid-template-areas:
-      "title title title title title title title title"
-      "tagline tagline tagline tagline tagline tagline tagline tagline"
-      "events events events events events events events events";
-    align-items: start;
-  }
-
-  .upcoming-events-container {
-    grid-area: events;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-  }
-
-  .event-container {
-    background-image: url('images/event-bg-mobile.svg');
-    background-repeat: no-repeat;
-    background-size: contain;
-
-    height: 30vh;
-    width: 90vw;
-
-    display: flex;
-    align-content: center;
-    justify-content: center;
-  }
-
-  .event-card-body {
-    margin: 50px;
-    width: 100%;
-  }
-
-  .event-card {
-    display: flex;
-    align-content: center;
-    justify-content: center;
-
-  }
-
-  .event-page-title {
-    grid-area: title;
-    font-size: 1.75rem;
-  }
-
-  .event-title {
-    font-size: 1.25rem;
-  }
-
-  .event-date {
-    font-size: 1rem;
-  }
-
-  .event-desc {
-    font-size: 1rem;
-  }
-
-  .event-price {
-    font-size: 1.25rem;
-  }
-
-  .event-tagline {
-    grid-area: tagline;
-    text-align: center;
-    font-size: 1.5rem;
-  }
-
-  /* SIGNUP FORM PAGE */
-
-  .sign-up {
-    background-image: url('images/deadlift2opacity50.JPG');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas:
-      "title title title title title title title title"
-      "confirmation confirmation confirmation confirmation confirmation confirmation confirmation confirmation"
-      "event event event event event event event event"
-      "details details details details details details details details"
-      "payment payment payment payment payment payment payment payment";
-    align-items: start;
-  }
-
-  .signup-title {
-    grid-area: title;
-    font-size: 1.75rem;
-  }
-
-  .signup-confirmation-warning {
-    grid-area: confirmation;
-    text-align: center;
-    margin: 2rem;
-  }
-
-  .signup-event-container {
-    grid-area: event;
-    background-image: url('images/event-bg-mobile.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    height: 21vh;
-    width: 90vw;
-    margin: auto;
-  }
-
-  .signup-card-body {
-    width: 85%;
-  }
-
-  .event-title {
-    font-size: 1.3rem;
-  }
-
-  .event-date {
-    font-size: 1.25rem;
-  }
-
-  .event-desc {
-    font-size: 1rem;
-  }
-
-  .event-price {
-    font-size: 1.5rem;
-  }
-
-  .stripe-payment-container {
-    grid-area: payment;
-    display: flex;
-    justify-content: center;
-    width: 90vw;
-    margin: auto;
-  }
-
-/* CHECKOUT FORM */
-
-#payment-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  margin: px auto 0px auto;
-}
-
-label {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  line-height: 32px;
-  font-size: 1.2rem;
-}
-
-input {
-  height: 35px;
-  margin-right: 50px;
-}
-
-.stripe-payment {
-  width: 80%;
-}
-
-/* CONTACT US PAGE  */
-
-.contact-us {
-  background-image: url('images/gym3opacity.JPG');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-areas:
-    "title title title title title title title title"
-    "none none none none none none none none"
-    "hours hours hours hours hours hours hours hours"
-    ". . email email email email . ."
-    ". . . address address . . ."
-    "map map map map map map map map";
-    align-items: start;
-}
-
-.contact-title {
-  grid-area: title;
-  font-size: 1.75rem;
-
-}
-
-.contact-coaching-hours p {
-  grid-area: hours;
-  text-align: center;
-
-  font-size: 1.25rem;
-}
-
-.contact-address p {
-  grid-area: address;
-
-  display: flex;
-  justify-content: center;
-
-  text-align: center;
-
-  font-size: 1.25rem;
-}
-
-.contact-email p {
-  grid-area: email;
-
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  font-size: 1.25rem;
-}
-
-.contact-map {
-  grid-area: map;
-
-  display: flex;
-  justify-content: center;
-}
-
-}
-
-@media (max-width: 62em) {
-  .navbar-logo {
-    width: 45%;
-    height: auto;
-  }
-
-  h1 {
-    margin-bottom: -14px;
-  }
-
-  h5 {
-    font-size: 1.5rem;
-  }
-
-  .membership {
-    background-image: url('images/gym2opacity.JPG');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas:
-      "title title title title title title title title"
-      "none none none none none none none none"
-      "option1 option1 option1 option1 option1 option1 option1 option1"
-      "option2 option2 option2 option2 option2 option2 option2 option2"
-      "option3 option3 option3 option3 option3 option3 option3 option3";
-    align-items: start;
-    grid-row-gap: 20px;
-  }
-
-  /* MEMBERSHIP PAGE */
-
-  .membership-option {
-    display: flex;
-    flex-direction: row;
-
-    background-image: url('images/test.svg');
-    background-repeat: no-repeat;
-    background-size: contain;
-
-    height: 22vh;
-    width: 90%;
-    align-content: center;
-    justify-content: center;
-  }
-
-  .membership-title {
-    grid-area: title;
-    font-size: 1.75rem;
-  }
-
-  .option1 {
-    grid-area: option1;
-    margin-left: 5%;
-  }
-
-  .option2 {
-    grid-area: option2;
-    margin-left: 5%;
-  }
-
-  .option3 {
-    grid-area: option3;
-    margin-left: 5%;
-  }
-
-  .membership-img {
-    margin-left: 5%;
-    margin-right: 3vw;
-    align-self: center;
-    width:225px;
-  }
-
-  .membership-desc {
-    margin-top: -2%;
-    width: 60vw;
-  }
-
-  .membership-para {
-    font-size: 1rem;
-    width: 58vw;
-  }
-
-  /* EVENTS PAGE */
-
-  .events {
-    background-image: url('images/deadlift2opacity50.JPG');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: .75fr .5fr 1fr 1fr;
-    grid-template-areas:
-      "title title title title title title title title"
-      "tagline tagline tagline tagline tagline tagline tagline tagline"
-      "events events events events events events events events";
-    align-items: start;
-  }
-
-  .upcoming-events-container {
-    grid-area: events;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .event-container {
-    background-image: url('images/test.svg');
-    background-repeat: no-repeat;
-    background-size: contain;
-
-    height: 20vh;
-    width: 90vw;
-
-    display: flex;
-    align-items: center;
-    margin-left: 9vw;
-  }
-
-  .event-card-body {
-    margin: auto;
-    width: 80%;
-
-  }
-
-  .event-card {
-    display: flex;
-    align-items: center;
-  }
-
-  .event-page-title {
-    grid-area: title;
-    font-size: 1.75rem;
-  }
-
-  .event-title {
-    font-size: 1.25rem;
-  }
-
-  .event-date {
-    font-size: 1rem;
-  }
-
-  .event-desc {
-    font-size: 1rem;
-  }
-
-  .event-price {
-    font-size: 1.25rem;
-  }
-
-  .event-tagline {
-    grid-area: tagline;
-    text-align: center;
-    font-size: 1.5rem;
-  }
-
-  /* SIGNUP FORM PAGE */
-
-  .sign-up {
-    background-image: url('images/deadlift2opacity50.JPG');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas:
-      "title title title title title title title title"
-      "confirmation confirmation confirmation confirmation confirmation confirmation confirmation confirmation"
-      "event event event event event event event event"
-      "details details details details details details details details"
-      "payment payment payment payment payment payment payment payment";
-    align-items: start;
-  }
-
-  .signup-title {
-    grid-area: title;
-    font-size: 1.75rem;
-  }
-
-  .signup-confirmation-warning {
-    grid-area: confirmation;
-    text-align: center;
-    margin: 2rem;
-  }
-
-  .signup-event-container {
-    grid-area: event;
-    background-image: url('images/test.svg');
-    background-repeat: no-repeat;
-    background-size: contain;
-
-    height: 21vh;
-    width: 90vw;
-    margin-left: 7vw;;
-  }
-
-  .signup-card-body {
-    width: 80%;
-    margin-top: 5vh;
-    margin-left: 7vw;
-  }
-
-  .event-title {
-    font-size: 1.5rem;
-  }
-
-  .event-date {
-    font-size: 1.5rem;
-  }
-
-  .event-desc {
-    font-size: 1rem;
-  }
-
-  .event-price {
-    font-size: 1.5rem;
-  }
-
-  .stripe-payment-container {
-    grid-area: payment;
-    display: flex;
-    justify-content: center;
-    width: 90vw;
-    margin: auto;
-  }
-
-  /* CHECKOUT FORM */
-
-  #payment-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  margin: 0 auto 0 auto;
-  }
-
-  label {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  line-height: 32px;
-  font-size: 1.2rem;
-  }
-
-  input {
-  height: 35px;
-  margin-right: 50px;
-  }
-
-  .stripe-payment {
-  width: 80%;
-  }
-
-  /* CONTACT US PAGE  */
-
-  .contact-us {
-  background-image: url('images/gym3opacity.JPG');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-areas:
-    "title title title title title title title title"
-    "none none none none none none none none"
-    "hours hours hours hours hours hours hours hours"
-    ". . email email email email . ."
-    ". . . address address . . ."
-    "map map map map map map map map";
-    align-items: start;
-  }
-
-  .contact-title {
-  grid-area: title;
-  font-size: 1.75rem;
-
-  }
-
-  .contact-coaching-hours p {
-  grid-area: hours;
-  text-align: center;
-
-  font-size: 1.25rem;
-  }
-
-  .contact-address p {
-  grid-area: address;
-
-  display: flex;
-  justify-content: center;
-
-  text-align: center;
-
-  font-size: 1.25rem;
-  }
-
-  .contact-email p {
-  grid-area: email;
-
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  font-size: 1.25rem;
-  }
-
-  .contact-map {
-  grid-area: map;
-
-  display: flex;
-  justify-content: center;
-  }
 }

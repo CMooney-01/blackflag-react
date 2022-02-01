@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="63400.781mm"
+   height="12268.563mm"
+   viewBox="0 0 63400.778 12268.564"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="test3.svg"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#111111"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.01"
+     inkscape:cx="95450"
+     inkscape:cy="4850"
+     inkscape:window-width="2560"
+     inkscape:window-height="1369"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     showguides="true"
+     inkscape:guide-bbox="true">
+    <sodipodi:guide
+       position="48750.173,16475.437"
+       orientation="0,-1"
+       id="guide5055" />
+    <sodipodi:guide
+       position="20267.777,6778.4596"
+       orientation="1,0"
+       id="guide5057" />
+    <sodipodi:guide
+       position="21524.548,10204.813"
+       orientation="1,0"
+       id="guide5059" />
+    <sodipodi:guide
+       position="44331.631,15470.021"
+       orientation="0,-1"
+       id="guide5061" />
+    <sodipodi:guide
+       position="29594.339,16105.021"
+       orientation="0.70710678,-0.70710678"
+       id="guide5063" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Layer 2"
+     transform="translate(36420.162,11206.433)">
+    <path
+       id="rect31-1"
+       style="fill:#1e1e1e;fill-opacity:0.5;fill-rule:evenodd;stroke-width:165.414"
+       d="m -32615.288,-11206.433 -3804.874,3266.4886 14.178,8059.70527 L 21935.062,86.158503 25988.08,-3206.963 v -7926.507 z"
+       sodipodi:nodetypes="ccccccc" />
+  </g>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(36420.162,11206.433)">
+    <path
+       id="rect31"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke-width:166.209"
+       d="m -31622.714,-10318.799 -3804.871,3266.489 41.355,8114.4408 58313.841,-88.33773 4053.01,-3293.11997 -30.575,-8012.7891 z"
+       sodipodi:nodetypes="ccccccc" />
+  </g>
+</svg>
