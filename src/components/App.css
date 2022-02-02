@@ -317,7 +317,8 @@ p {
   background-image: url('images/test.svg');
   background-repeat: no-repeat;
   background-size: contain;
-  width: 95%;
+  display: flex;
+  align-items: center;
   margin: auto;
 }
 
@@ -389,4 +390,105 @@ input {
   display: flex;
   justify-content: center;
 }
+}
+
+@media (min-width: 992px) {
+  /* MEMBERSHIP PAGE */
+  .membership {
+    grid-template-areas:
+      "title title title title title title title title"
+      ". option1 option1 option1 option1 option1 option1 ."
+      ". option2 option2 option2 option2 option2 option2 ."
+      ". option3 option3 option3 option3 option3 option3 .";
+  }
+
+  .membership-para {
+    font-size: 1.25rem;
+    width: 95%;
+  }
+
+  /* EVENTS PAGE */
+  .events {
+    grid-template-areas:
+      "title title title title title title title title"
+      "tagline tagline tagline tagline tagline tagline tagline tagline"
+      ". events events events events events events .";
+  }
+
+  .event-title {
+    font-size: 1.5rem;
+  }
+
+  .event-date {
+    font-size: 1.25rem;
+  }
+
+  .event-desc {
+    font-size: 1.25rem;
+  }
+
+  .event-price {
+    font-size: 1.5rem;
+  }
+
+  .event-tagline {
+    grid-area: tagline;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  /* CONTACT US PAGE  */
+  .contact-us, p {
+    font-size: 1.25rem;
+  }
+
+}
+
+@media (min-width: 1200px) {
+  h1 {
+    margin-bottom: -21px;
+    font-size: 5rem;
+  }
+
+  h3 {
+    font-size: 2.5rem;
+  }
+
+  h5 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+  /* HOME PAGE  */
+  .home-title {
+    font-size: 6rem;
+  }
+
+  /* MEMBERSHIP PAGE */
+  .membership-img {
+    width: 35%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    margin-top: 2.5%;
+  }
+
+}
+
+@media (min-width: 1800px) {
+  /* MEMBERSHIP PAGE */
+  .membership {
+    grid-template-areas:
+      "title title title title title title title title"
+      "none none none none none none none none"
+      ". . option1 option1 option1 option1 . ."
+      ". . option2 option2 option2 option2 . ."
+      ". . option3 option3 option3 option3 . .";
+  }
+
+  .membership-para {
+    font-size: 1.5rem;
+    width: 95%;
+  }
 }
